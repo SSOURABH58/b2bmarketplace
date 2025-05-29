@@ -48,7 +48,7 @@ const Search = ({
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="running-shoes">Running Shoes</SelectItem>
-          <SelectItem value="clothing">Clothing</SelectItem>
+          <SelectItem value="televisions">televisions</SelectItem>
           <SelectItem value="books">Books</SelectItem>
         </SelectContent>
       </Select>

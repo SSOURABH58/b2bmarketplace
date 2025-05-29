@@ -6,15 +6,17 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
+import { Button } from "@/components/ui/button"; // Import the Button component
 
 const facets = [
   {
@@ -55,45 +57,21 @@ const facets = [
   },
 ];
 
-const products = [
-  {
-    _id: "654a123df45b123abc789",
-
-    title: "Nike Zoom Red Running Shoes Size 9",
-
-    description:
-      "High-performance running shoes for professionals. Lightweight, breathable and stylish.",
-
-    price: 1999,
-
-    location: "Mumbai",
-
-    category: "running-shoes",
-
-    attributes: {
-      size: "9",
-
-      colour: "red",
-
-      brand: "nike",
-    },
-  },
-];
-
 const fetchProducts = async (
   search: string,
   categories: string,
-  filters: any
+  filters: any,
+  page: number // Add page parameter
 ) => {
-  console.log("search", search, categories, filters);
+  console.log("search", search, categories, filters, page);
 
   try {
-    // For GET request with query params (recommended)
     const { data } = await axios.get("/api/search", {
       params: {
         search,
         categories,
         filters,
+        page, // Pass page to the API
       },
       headers: {
         "Content-Type": "application/json",
@@ -107,19 +85,33 @@ const fetchProducts = async (
   }
 };
 
+const productSkeleton = [1, 2, 3];
+
 export default function Home() {
   const [search, setSearch] = useState<string>("");
   const [categories, setCategories] = useState<string>("running-shoes");
   const [filters, setFilters] = useState<any>();
+  const [page, setPage] = useState<number>(1); // New state for current page
 
   const { data, isLoading } = useQuery({
-    queryKey: ["search", search, categories, filters],
-    queryFn: () => fetchProducts(search, categories, filters),
+    queryKey: ["search", search, categories, filters, page],
+    queryFn: () => fetchProducts(search, categories, filters, page),
+    placeholderData: keepPreviousData,
   });
 
-  // if (isLoading) return <div>Loading...</div>;
-
   console.log(data);
+
+  const handleNextPage = () => {
+    if (data && page < data.totalPages) {
+      setPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (page > 1) {
+      setPage((prevPage) => prevPage - 1);
+    }
+  };
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -137,11 +129,33 @@ export default function Home() {
               <Filter facets={facets} />
             </div>
             <div className="grow gap-2 flex flex-col scroll-auto max-h-8/12">
-              {data?.results?.map((product: any) => (
-                <Listing listing={product} />
-              ))}
+              {(data?.results ?? productSkeleton)?.map(
+                (product: any, index: number) => (
+                  <Listing key={product._id ?? index} listing={product} />
+                )
+              )}
             </div>
           </CardContent>
+          <CardFooter>
+            {/* Pagination Controls */}
+            <div className="flex justify-between w-full mt-4">
+              <Button
+                onClick={handlePreviousPage}
+                disabled={page === 1 || isLoading}
+              >
+                Previous
+              </Button>
+              <span className="self-center">
+                Page {page} of {data?.totalPages || 1}
+              </span>
+              <Button
+                onClick={handleNextPage}
+                disabled={isLoading || (data && page >= data.totalPages)}
+              >
+                Next
+              </Button>
+            </div>
+          </CardFooter>
         </Card>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>

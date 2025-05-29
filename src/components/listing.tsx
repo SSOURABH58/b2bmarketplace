@@ -20,6 +20,9 @@ interface ListingProps {
 }
 
 function Listing({ listing }: ListingProps) {
+  if (!listing?._id) {
+    return <Skeleton className=" rotate-1 w-full h-24" />;
+  }
   return (
     <Card className="w-full gap-1 p-2 cursor-pointer">
       <CardContent className="w-full flex flex-row px-2 gap-2 ">
@@ -39,7 +42,6 @@ function Listing({ listing }: ListingProps) {
           <div className="text-xs text-gray-400">{listing.location}</div>
         </div>
       </CardContent>
-      {/* <CardFooter className="m-0 px-2">its the footer of the card</CardFooter> */}
     </Card>
   );
 }
