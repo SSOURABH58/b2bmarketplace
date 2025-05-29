@@ -1,3 +1,4 @@
+"use client";
 import Filter from "@/components/filter";
 import Listing from "@/components/listing";
 import Search from "@/components/search";
@@ -10,7 +11,10 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
+import { useState } from "react";
+import axios from "axios";
 
 const facets = [
   {
@@ -76,19 +80,66 @@ const products = [
   },
 ];
 
+const fetchProducts = async (
+  search: string,
+  categories: string,
+  filters: any
+) => {
+  console.log("search", search, categories, filters);
+
+  try {
+    // For GET request with query params (recommended)
+    const { data } = await axios.get("/api/search", {
+      params: {
+        search,
+        categories,
+        filters,
+      },
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    return data;
+  } catch (error) {
+    console.error("API Error:", error);
+    throw error;
+  }
+};
+
 export default function Home() {
+  const [search, setSearch] = useState<string>("");
+  const [categories, setCategories] = useState<string>("running-shoes");
+  const [filters, setFilters] = useState<any>();
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["search", search, categories, filters],
+    queryFn: () => fetchProducts(search, categories, filters),
+  });
+
+  // if (isLoading) return <div>Loading...</div>;
+
+  console.log(data);
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-5/6 max-w-3xl">
         <h1 className="text-4xl font-semibold">B2BMarketplace</h1>
-        <Search />
+        <Search
+          search={search}
+          setSearch={setSearch}
+          categories={categories}
+          setCategories={setCategories}
+        />
         <Card className="w-full min-h-60 max-h-8/12">
           <CardContent className=" flex flex-row gap-2">
             <div className="w-2/6">
               <Filter facets={facets} />
             </div>
             <div className="grow gap-2 flex flex-col scroll-auto max-h-8/12">
-              <Listing listing={products[0]} />
+              {data?.results?.map((product: any) => (
+                <Listing listing={product} />
+              ))}
             </div>
           </CardContent>
         </Card>
