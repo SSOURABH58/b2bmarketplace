@@ -1,0 +1,572 @@
+{
+  "categories": [
+    {
+      "name": "Running Shoes",
+      "slug": "running-shoes",
+      "attributeSchema": [
+        {
+          "name": "Size",
+          "slug": "size",
+          "type": "dropdown",
+          "options": [
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "name": "Colour",
+          "slug": "colour",
+          "type": "check",
+          "options": [
+            {
+              "label": "Red",
+              "value": "red"
+            },
+            {
+              "label": "Black",
+              "value": "black"
+            },
+            {
+              "label": "White",
+              "value": "white"
+            },
+            {
+              "label": "Blue",
+              "value": "blue"
+            }
+          ]
+        },
+        {
+          "name": "Brand",
+          "slug": "brand",
+          "type": "check",
+          "options": [
+            {
+              "label": "Nike",
+              "value": "nike"
+            },
+            {
+              "label": "Adidas",
+              "value": "adidas"
+            },
+            {
+              "label": "Puma",
+              "value": "puma"
+            },
+            {
+              "label": "Reebok",
+              "value": "reebok"
+            }
+          ]
+        },
+        {
+          "name": "Price",
+          "slug": "price",
+          "type": "range",
+          "min": 1000,
+          "max": 5000
+        }
+      ]
+    },
+    {
+      "name": "Televisions",
+      "slug": "televisions",
+      "attributeSchema": [
+        {
+          "name": "Screen Size",
+          "slug": "screenSize",
+          "type": "dropdown",
+          "options": [
+            {
+              "label": "32\"",
+              "value": "32"
+            },
+            {
+              "label": "40\"",
+              "value": "40"
+            },
+            {
+              "label": "43\"",
+              "value": "43"
+            },
+            {
+              "label": "50\"",
+              "value": "50"
+            },
+            {
+              "label": "55\"",
+              "value": "55"
+            },
+            {
+              "label": "65\"",
+              "value": "65"
+            }
+          ]
+        },
+        {
+          "name": "Resolution",
+          "slug": "resolution",
+          "type": "check",
+          "options": [
+            {
+              "label": "HD",
+              "value": "hd"
+            },
+            {
+              "label": "Full HD",
+              "value": "full hd"
+            },
+            {
+              "label": "4K",
+              "value": "4k"
+            },
+            {
+              "label": "8K",
+              "value": "8k"
+            }
+          ]
+        },
+        {
+          "name": "Brand",
+          "slug": "brand",
+          "type": "check",
+          "options": [
+            {
+              "label": "Samsung",
+              "value": "samsung"
+            },
+            {
+              "label": "Sony",
+              "value": "sony"
+            },
+            {
+              "label": "LG",
+              "value": "lg"
+            },
+            {
+              "label": "Panasonic",
+              "value": "panasonic"
+            }
+          ]
+        },
+        {
+          "name": "Price",
+          "slug": "price",
+          "type": "range",
+          "min": 10000,
+          "max": 80000
+        }
+      ]
+    }
+  ],
+  "listings": [
+    {
+      "title": "Nike Running Shoes Size 8 - Red",
+      "description": "Comfortable and durable Nike running shoes, perfect for fitness and daily wear.",
+      "price": 3794,
+      "location": "Chennai",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+3",
+      "attributes": {
+        "size": "8",
+        "colour": "red",
+        "brand": "nike"
+      }
+    },
+    {
+      "title": "Adidas Running Shoes Size 7 - Red",
+      "description": "Comfortable and durable Adidas running shoes, perfect for fitness and daily wear.",
+      "price": 2090,
+      "location": "Hyderabad",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+2",
+      "attributes": {
+        "size": "7",
+        "colour": "red",
+        "brand": "adidas"
+      }
+    },
+    {
+      "title": "Adidas Running Shoes Size 10 - Red",
+      "description": "Comfortable and durable Adidas running shoes, perfect for fitness and daily wear.",
+      "price": 2132,
+      "location": "Chennai",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+2",
+      "attributes": {
+        "size": "10",
+        "colour": "red",
+        "brand": "adidas"
+      }
+    },
+    {
+      "title": "Nike Running Shoes Size 8 - White",
+      "description": "Comfortable and durable Nike running shoes, perfect for fitness and daily wear.",
+      "price": 1683,
+      "location": "Delhi",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+1",
+      "attributes": {
+        "size": "8",
+        "colour": "white",
+        "brand": "nike"
+      }
+    },
+    {
+      "title": "Adidas Running Shoes Size 6 - White",
+      "description": "Comfortable and durable Adidas running shoes, perfect for fitness and daily wear.",
+      "price": 3064,
+      "location": "Chennai",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+1",
+      "attributes": {
+        "size": "6",
+        "colour": "white",
+        "brand": "adidas"
+      }
+    },
+    {
+      "title": "Nike Running Shoes Size 6 - White",
+      "description": "Comfortable and durable Nike running shoes, perfect for fitness and daily wear.",
+      "price": 4195,
+      "location": "Mumbai",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+1",
+      "attributes": {
+        "size": "6",
+        "colour": "white",
+        "brand": "nike"
+      }
+    },
+    {
+      "title": "Adidas Running Shoes Size 8 - Black",
+      "description": "Comfortable and durable Adidas running shoes, perfect for fitness and daily wear.",
+      "price": 1500,
+      "location": "Bangalore",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+2",
+      "attributes": {
+        "size": "8",
+        "colour": "black",
+        "brand": "adidas"
+      }
+    },
+    {
+      "title": "Reebok Running Shoes Size 10 - Red",
+      "description": "Comfortable and durable Reebok running shoes, perfect for fitness and daily wear.",
+      "price": 4155,
+      "location": "Bangalore",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+1",
+      "attributes": {
+        "size": "10",
+        "colour": "red",
+        "brand": "reebok"
+      }
+    },
+    {
+      "title": "Nike Running Shoes Size 7 - White",
+      "description": "Comfortable and durable Nike running shoes, perfect for fitness and daily wear.",
+      "price": 4478,
+      "location": "Hyderabad",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+3",
+      "attributes": {
+        "size": "7",
+        "colour": "white",
+        "brand": "nike"
+      }
+    },
+    {
+      "title": "Nike Running Shoes Size 8 - White",
+      "description": "Comfortable and durable Nike running shoes, perfect for fitness and daily wear.",
+      "price": 2417,
+      "location": "Delhi",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+2",
+      "attributes": {
+        "size": "8",
+        "colour": "white",
+        "brand": "nike"
+      }
+    },
+    {
+      "title": "Reebok Running Shoes Size 7 - White",
+      "description": "Comfortable and durable Reebok running shoes, perfect for fitness and daily wear.",
+      "price": 2625,
+      "location": "Bangalore",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+3",
+      "attributes": {
+        "size": "7",
+        "colour": "white",
+        "brand": "reebok"
+      }
+    },
+    {
+      "title": "Adidas Running Shoes Size 6 - White",
+      "description": "Comfortable and durable Adidas running shoes, perfect for fitness and daily wear.",
+      "price": 3098,
+      "location": "Delhi",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+1",
+      "attributes": {
+        "size": "6",
+        "colour": "white",
+        "brand": "adidas"
+      }
+    },
+    {
+      "title": "Reebok Running Shoes Size 10 - Black",
+      "description": "Comfortable and durable Reebok running shoes, perfect for fitness and daily wear.",
+      "price": 3405,
+      "location": "Bangalore",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+3",
+      "attributes": {
+        "size": "10",
+        "colour": "black",
+        "brand": "reebok"
+      }
+    },
+    {
+      "title": "Nike Running Shoes Size 6 - Blue",
+      "description": "Comfortable and durable Nike running shoes, perfect for fitness and daily wear.",
+      "price": 1611,
+      "location": "Bangalore",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+1",
+      "attributes": {
+        "size": "6",
+        "colour": "blue",
+        "brand": "nike"
+      }
+    },
+    {
+      "title": "Adidas Running Shoes Size 9 - White",
+      "description": "Comfortable and durable Adidas running shoes, perfect for fitness and daily wear.",
+      "price": 4326,
+      "location": "Mumbai",
+      "category": "running-shoes",
+      "image": "https://via.placeholder.com/300x200.png?text=Running+Shoe+2",
+      "attributes": {
+        "size": "9",
+        "colour": "white",
+        "brand": "adidas"
+      }
+    },
+    {
+      "title": "Sony 43\" HD TV",
+      "description": "Sony television with HD resolution and 43-inch screen. Great for home entertainment.",
+      "price": 48077,
+      "location": "Delhi",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+1",
+      "attributes": {
+        "screenSize": "43",
+        "resolution": "hd",
+        "brand": "sony"
+      }
+    },
+    {
+      "title": "LG 50\" 4K TV",
+      "description": "LG television with 4K resolution and 50-inch screen. Great for home entertainment.",
+      "price": 20589,
+      "location": "Mumbai",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+1",
+      "attributes": {
+        "screenSize": "50",
+        "resolution": "4k",
+        "brand": "lg"
+      }
+    },
+    {
+      "title": "Samsung 40\" Full HD TV",
+      "description": "Samsung television with Full HD resolution and 40-inch screen. Great for home entertainment.",
+      "price": 48012,
+      "location": "Chennai",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+3",
+      "attributes": {
+        "screenSize": "40",
+        "resolution": "full hd",
+        "brand": "samsung"
+      }
+    },
+    {
+      "title": "Samsung 43\" 8K TV",
+      "description": "Samsung television with 8K resolution and 43-inch screen. Great for home entertainment.",
+      "price": 65595,
+      "location": "Mumbai",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+3",
+      "attributes": {
+        "screenSize": "43",
+        "resolution": "8k",
+        "brand": "samsung"
+      }
+    },
+    {
+      "title": "Samsung 43\" HD TV",
+      "description": "Samsung television with HD resolution and 43-inch screen. Great for home entertainment.",
+      "price": 60397,
+      "location": "Delhi",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+2",
+      "attributes": {
+        "screenSize": "43",
+        "resolution": "hd",
+        "brand": "samsung"
+      }
+    },
+    {
+      "title": "LG 55\" 4K TV",
+      "description": "LG television with 4K resolution and 55-inch screen. Great for home entertainment.",
+      "price": 45578,
+      "location": "Hyderabad",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+1",
+      "attributes": {
+        "screenSize": "55",
+        "resolution": "4k",
+        "brand": "lg"
+      }
+    },
+    {
+      "title": "LG 32\" Full HD TV",
+      "description": "LG television with Full HD resolution and 32-inch screen. Great for home entertainment.",
+      "price": 39954,
+      "location": "Bangalore",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+3",
+      "attributes": {
+        "screenSize": "32",
+        "resolution": "full hd",
+        "brand": "lg"
+      }
+    },
+    {
+      "title": "LG 43\" Full HD TV",
+      "description": "LG television with Full HD resolution and 43-inch screen. Great for home entertainment.",
+      "price": 50242,
+      "location": "Mumbai",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+1",
+      "attributes": {
+        "screenSize": "43",
+        "resolution": "full hd",
+        "brand": "lg"
+      }
+    },
+    {
+      "title": "Samsung 55\" Full HD TV",
+      "description": "Samsung television with Full HD resolution and 55-inch screen. Great for home entertainment.",
+      "price": 21853,
+      "location": "Mumbai",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+2",
+      "attributes": {
+        "screenSize": "55",
+        "resolution": "full hd",
+        "brand": "samsung"
+      }
+    },
+    {
+      "title": "Samsung 50\" Full HD TV",
+      "description": "Samsung television with Full HD resolution and 50-inch screen. Great for home entertainment.",
+      "price": 15099,
+      "location": "Hyderabad",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+3",
+      "attributes": {
+        "screenSize": "50",
+        "resolution": "full hd",
+        "brand": "samsung"
+      }
+    },
+    {
+      "title": "Sony 32\" 4K TV",
+      "description": "Sony television with 4K resolution and 32-inch screen. Great for home entertainment.",
+      "price": 18799,
+      "location": "Delhi",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+2",
+      "attributes": {
+        "screenSize": "32",
+        "resolution": "4k",
+        "brand": "sony"
+      }
+    },
+    {
+      "title": "Sony 43\" 4K TV",
+      "description": "Sony television with 4K resolution and 43-inch screen. Great for home entertainment.",
+      "price": 27715,
+      "location": "Chennai",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+1",
+      "attributes": {
+        "screenSize": "43",
+        "resolution": "4k",
+        "brand": "sony"
+      }
+    },
+    {
+      "title": "Sony 43\" 8K TV",
+      "description": "Sony television with 8K resolution and 43-inch screen. Great for home entertainment.",
+      "price": 42269,
+      "location": "Bangalore",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+1",
+      "attributes": {
+        "screenSize": "43",
+        "resolution": "8k",
+        "brand": "sony"
+      }
+    },
+    {
+      "title": "Panasonic 40\" 8K TV",
+      "description": "Panasonic television with 8K resolution and 40-inch screen. Great for home entertainment.",
+      "price": 37080,
+      "location": "Hyderabad",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+1",
+      "attributes": {
+        "screenSize": "40",
+        "resolution": "8k",
+        "brand": "panasonic"
+      }
+    },
+    {
+      "title": "LG 50\" HD TV",
+      "description": "LG television with HD resolution and 50-inch screen. Great for home entertainment.",
+      "price": 35166,
+      "location": "Hyderabad",
+      "category": "televisions",
+      "image": "https://via.placeholder.com/300x200.png?text=Television+2",
+      "attributes": {
+        "screenSize": "50",
+        "resolution": "hd",
+        "brand": "lg"
+      }
+    }
+  ]
+}
