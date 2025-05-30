@@ -10,52 +10,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
 import { Button } from "@/components/ui/button"; // Import the Button component
-
-const facets = [
-  {
-    name: "Size",
-    slug: "size",
-    type: "dropdown",
-    options: [
-      { label: "6", value: "6" },
-      { label: "7", value: "7" },
-      { label: "8", value: "8" },
-      { label: "9", value: "9" },
-    ],
-  },
-  {
-    name: "Colour",
-    slug: "colour",
-    type: "check",
-    options: [
-      { label: "Red", value: "red" },
-      { label: "Black", value: "black" },
-    ],
-  },
-  {
-    name: "Price",
-    slug: "price",
-    type: "range",
-    min: 500,
-    max: 4999,
-  },
-  {
-    name: "Brand",
-    slug: "brand",
-    type: "check",
-    options: [
-      { label: "Nike", value: "nike" },
-      { label: "Puma", value: "puma" },
-    ],
-  },
-];
 
 const fetchProducts = async (
   search: string,
@@ -70,8 +28,8 @@ const fetchProducts = async (
       params: {
         search,
         categories,
-        filters,
-        page, // Pass page to the API
+        filters: `${JSON.stringify(filters)}`,
+        page,
       },
       headers: {
         "Content-Type": "application/json",
@@ -126,13 +84,20 @@ export default function Home() {
         <Card className="w-full min-h-60 max-h-8/12">
           <CardContent className=" flex flex-row gap-2">
             <div className="w-2/6">
-              <Filter facets={facets} />
+              <Filter
+                category={categories}
+                filters={filters}
+                setFilters={setFilters}
+              />
             </div>
             <div className="grow gap-2 flex flex-col scroll-auto max-h-8/12">
-              {(data?.results ?? productSkeleton)?.map(
+              {(isLoading ? productSkeleton : data?.results)?.map(
                 (product: any, index: number) => (
                   <Listing key={product._id ?? index} listing={product} />
                 )
+              )}
+              {!isLoading && data?.results?.length === 0 && (
+                <div className="w-full p-3 text-center">No Results Found</div>
               )}
             </div>
           </CardContent>

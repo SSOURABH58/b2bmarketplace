@@ -11,6 +11,7 @@ interface ListingProps {
     price: number;
     location: string;
     category: string;
+    image: string;
     attributes: {
       size?: string;
       colour?: string;
@@ -27,7 +28,7 @@ function Listing({ listing }: ListingProps) {
     <Card className="w-full gap-1 p-2 cursor-pointer">
       <CardContent className="w-full flex flex-row px-2 gap-2 ">
         <Image
-          src="/images/listing.jpg"
+          src="https://picsum.photos/200"
           width={100}
           height={60}
           alt={listing.title}
