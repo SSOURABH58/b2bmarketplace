@@ -128,7 +128,7 @@ function Filter({ category, filters, setFilters }: FilterProps) {
                 handleFilterChange(facet.slug, facet.type, value)
               }
             >
-              <SelectTrigger className="w-[180px]">
+              <SelectTrigger className="w-[180px] cursor-pointer">
                 <SelectValue placeholder={`Select a ${facet.name}`} />
               </SelectTrigger>
               <SelectContent>
@@ -143,8 +143,12 @@ function Filter({ category, filters, setFilters }: FilterProps) {
           {facet.type === "check" && facet.options && (
             <div className="flex flex-col space-y-2">
               {facet.options.map((option) => (
-                <div key={option.value} className="flex items-center space-x-2">
+                <div
+                  key={option.value}
+                  className="flex items-center space-x-2 cursor-pointer"
+                >
                   <Checkbox
+                    className="cursor-pointer"
                     id={`${facet.slug}-${option.value}`}
                     checked={
                       filters[facet.slug]?.value?.includes(option.value) ||
@@ -168,7 +172,10 @@ function Filter({ category, filters, setFilters }: FilterProps) {
                       }
                     }}
                   />
-                  <Label htmlFor={`${facet.slug}-${option.value}`}>
+                  <Label
+                    htmlFor={`${facet.slug}-${option.value}`}
+                    className="cursor-pointer"
+                  >
                     {option.label}
                   </Label>
                 </div>
@@ -188,6 +195,7 @@ function Filter({ category, filters, setFilters }: FilterProps) {
                   onValueChange={(value) =>
                     handleFilterChange(facet.slug, facet.type, value)
                   }
+                  className="cursor-pointer"
                 />
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>{filters[facet.slug]?.value?.[0] || facet.min}</span>

@@ -28,10 +28,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <QueryClientProvider client={queryClient}>
         <body>{children}</body>
       </QueryClientProvider>
+      <footer className="m-3 flex justify-center">
+        ssourabh025@gmail.com ❖ +91 9516550023 ❖ Bangalore,KA ❖{" "}
+        <a href="https://sourabh-portfolio-coral.vercel.app/">Portfolio</a> ❖{" "}
+        <a href="https://www.linkedin.com/in/sourabh58">LinkedIn</a>
+      </footer>
     </html>
   );
 }
