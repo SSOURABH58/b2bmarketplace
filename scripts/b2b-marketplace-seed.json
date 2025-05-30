@@ -31,9 +31,23 @@
           ]
         },
         {
-          "name": "Smart TV",
-          "slug": "smart",
-          "type": "check"
+          "name": "Brand",
+          "slug": "brand",
+          "type": "check",
+          "options": [
+            {
+              "label": "Sony",
+              "value": "sony"
+            },
+            {
+              "label": "Samsung",
+              "value": "samsung"
+            },
+            {
+              "label": "LG",
+              "value": "lg"
+            }
+          ]
         }
       ]
     },
@@ -84,272 +98,614 @@
           ]
         },
         {
-          "name": "Waterproof",
-          "slug": "waterproof",
-          "type": "check"
+          "name": "Brand",
+          "slug": "brand",
+          "type": "check",
+          "options": [
+            {
+              "label": "Nike",
+              "value": "nike"
+            },
+            {
+              "label": "Adidas",
+              "value": "adidas"
+            },
+            {
+              "label": "Puma",
+              "value": "puma"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "slug": "books",
+      "attributeSchema": [
+        {
+          "name": "Genre",
+          "slug": "genre",
+          "type": "dropdown",
+          "options": [
+            {
+              "label": "Fiction",
+              "value": "fiction"
+            },
+            {
+              "label": "Non-fiction",
+              "value": "non-fiction"
+            },
+            {
+              "label": "Comics",
+              "value": "comics"
+            },
+            {
+              "label": "Biography",
+              "value": "biography"
+            }
+          ]
+        },
+        {
+          "name": "Language",
+          "slug": "language",
+          "type": "dropdown",
+          "options": [
+            {
+              "label": "English",
+              "value": "english"
+            },
+            {
+              "label": "Hindi",
+              "value": "hindi"
+            },
+            {
+              "label": "Tamil",
+              "value": "tamil"
+            }
+          ]
+        },
+        {
+          "name": "Binding",
+          "slug": "binding",
+          "type": "check",
+          "options": [
+            {
+              "label": "Paperback",
+              "value": "paperback"
+            },
+            {
+              "label": "Hardcover",
+              "value": "hardcover"
+            }
+          ]
         }
       ]
     }
   ],
   "listings": [
     {
-      "title": "42\" Smart HD LED TV",
-      "description": "42\" Smart HD LED TV description.",
-      "price": 29513,
+      "title": "Sony 54\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 53088,
       "location": "Mumbai",
       "category": "televisions",
-      "image": "https://picsum.photos/id/101/200/300",
-      "attributes": {
-        "screenSize": 42,
-        "resolution": "hd",
-        "smart": true
-      }
-    },
-    {
-      "title": "50\" 4K Ultra HD Smart TV",
-      "description": "50\" 4K Ultra HD Smart TV description.",
-      "price": 36464,
-      "location": "Delhi",
-      "category": "televisions",
-      "image": "https://picsum.photos/id/102/200/300",
-      "attributes": {
-        "screenSize": 50,
-        "resolution": "4k",
-        "smart": true
-      }
-    },
-    {
-      "title": "32\" LED TV - Full HD",
-      "description": "32\" LED TV - Full HD description.",
-      "price": 38797,
-      "location": "Chennai",
-      "category": "televisions",
-      "image": "https://picsum.photos/id/103/200/300",
+      "image": "https://picsum.photos/id/100/200/300",
       "attributes": {
         "screenSize": 32,
         "resolution": "full-hd",
-        "smart": false
+        "brand": [
+          "sony"
+        ]
       }
     },
     {
-      "title": "65\" Smart 4K UHD TV",
-      "description": "65\" Smart 4K UHD TV description.",
-      "price": 10653,
+      "title": "Lg 61\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 18094,
       "location": "Pune",
+      "category": "televisions",
+      "image": "https://picsum.photos/id/101/200/300",
+      "attributes": {
+        "screenSize": 60,
+        "resolution": "full-hd",
+        "brand": [
+          "lg"
+        ]
+      }
+    },
+    {
+      "title": "Samsung 41\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 16380,
+      "location": "Pune",
+      "category": "televisions",
+      "image": "https://picsum.photos/id/102/200/300",
+      "attributes": {
+        "screenSize": 32,
+        "resolution": "full-hd",
+        "brand": [
+          "samsung"
+        ]
+      }
+    },
+    {
+      "title": "Samsung 47\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 37835,
+      "location": "Hyderabad",
+      "category": "televisions",
+      "image": "https://picsum.photos/id/103/200/300",
+      "attributes": {
+        "screenSize": 60,
+        "resolution": "4k",
+        "brand": [
+          "samsung"
+        ]
+      }
+    },
+    {
+      "title": "Sony 39\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 30167,
+      "location": "Mumbai",
       "category": "televisions",
       "image": "https://picsum.photos/id/104/200/300",
       "attributes": {
-        "screenSize": 65,
-        "resolution": "4k",
-        "smart": true
+        "screenSize": 55,
+        "resolution": "hd",
+        "brand": [
+          "sony"
+        ]
       }
     },
     {
-      "title": "40\" HD Ready TV",
-      "description": "40\" HD Ready TV description.",
-      "price": 12705,
-      "location": "Bangalore",
+      "title": "Sony 48\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 47869,
+      "location": "Chennai",
       "category": "televisions",
       "image": "https://picsum.photos/id/105/200/300",
       "attributes": {
-        "screenSize": 40,
-        "resolution": "hd",
-        "smart": false
+        "screenSize": 42,
+        "resolution": "full-hd",
+        "brand": [
+          "sony"
+        ]
       }
     },
     {
-      "title": "55\" 4K Android TV",
-      "description": "55\" 4K Android TV description.",
-      "price": 41037,
+      "title": "Lg 60\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 37812,
       "location": "Hyderabad",
       "category": "televisions",
       "image": "https://picsum.photos/id/106/200/300",
       "attributes": {
-        "screenSize": 55,
+        "screenSize": 60,
         "resolution": "4k",
-        "smart": true
+        "brand": [
+          "lg"
+        ]
       }
     },
     {
-      "title": "24\" LED TV - Compact",
-      "description": "24\" LED TV - Compact description.",
-      "price": 21394,
-      "location": "Ahmedabad",
+      "title": "Sony 47\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 39860,
+      "location": "Kolkata",
       "category": "televisions",
       "image": "https://picsum.photos/id/107/200/300",
       "attributes": {
-        "screenSize": 24,
+        "screenSize": 42,
         "resolution": "hd",
-        "smart": false
+        "brand": [
+          "sony"
+        ]
       }
     },
     {
-      "title": "49\" Smart Full HD TV",
-      "description": "49\" Smart Full HD TV description.",
-      "price": 46368,
-      "location": "Jaipur",
+      "title": "Sony 49\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 54623,
+      "location": "Hyderabad",
       "category": "televisions",
       "image": "https://picsum.photos/id/108/200/300",
       "attributes": {
-        "screenSize": 49,
-        "resolution": "full-hd",
-        "smart": true
+        "screenSize": 40,
+        "resolution": "4k",
+        "brand": [
+          "sony"
+        ]
       }
     },
     {
-      "title": "70\" Premium 4K Smart TV",
-      "description": "70\" Premium 4K Smart TV description.",
-      "price": 28507,
-      "location": "Kolkata",
+      "title": "Samsung 34\" Smart TV",
+      "description": "High-quality television with modern features.",
+      "price": 41195,
+      "location": "Lucknow",
       "category": "televisions",
       "image": "https://picsum.photos/id/109/200/300",
       "attributes": {
-        "screenSize": 70,
-        "resolution": "4k",
-        "smart": true
+        "screenSize": 40,
+        "resolution": "hd",
+        "brand": [
+          "samsung"
+        ]
       }
     },
     {
-      "title": "37\" Full HD LED TV",
-      "description": "37\" Full HD LED TV description.",
-      "price": 12358,
-      "location": "Lucknow",
-      "category": "televisions",
-      "image": "https://picsum.photos/id/110/200/300",
+      "title": "Nike Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2724,
+      "location": "Jaipur",
+      "category": "running-shoes",
+      "image": "https://picsum.photos/id/200/200/300",
       "attributes": {
-        "screenSize": 37,
-        "resolution": "full-hd",
-        "smart": false
+        "size": "9",
+        "colour": "blue",
+        "brand": [
+          "nike"
+        ]
       }
     },
     {
-      "title": "Red Running Shoes - Size 9",
-      "description": "Red Running Shoes - Size 9 description.",
-      "price": 2834,
+      "title": "Nike Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 1721,
       "location": "Mumbai",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/201/200/300",
       "attributes": {
-        "size": "9",
-        "colour": "red",
-        "waterproof": false
+        "size": "7",
+        "colour": "blue",
+        "brand": [
+          "nike"
+        ]
       }
     },
     {
-      "title": "Black Waterproof Shoes - Size 10",
-      "description": "Black Waterproof Shoes - Size 10 description.",
-      "price": 1884,
-      "location": "Delhi",
+      "title": "Adidas Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2038,
+      "location": "Mumbai",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/202/200/300",
       "attributes": {
-        "size": "10",
-        "colour": "black",
-        "waterproof": true
+        "size": "8",
+        "colour": "red",
+        "brand": [
+          "adidas"
+        ]
       }
     },
     {
-      "title": "Blue Runner Pro - Size 8",
-      "description": "Blue Runner Pro - Size 8 description.",
-      "price": 2159,
-      "location": "Chennai",
+      "title": "Nike Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2963,
+      "location": "Kolkata",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/203/200/300",
       "attributes": {
-        "size": "8",
-        "colour": "blue",
-        "waterproof": false
+        "size": "9",
+        "colour": "red",
+        "brand": [
+          "nike"
+        ]
       }
     },
     {
-      "title": "Trail Blazer Shoes - Size 7",
-      "description": "Trail Blazer Shoes - Size 7 description.",
-      "price": 2078,
-      "location": "Pune",
+      "title": "Puma Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 1883,
+      "location": "Mumbai",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/204/200/300",
       "attributes": {
         "size": "7",
-        "colour": "black",
-        "waterproof": true
+        "colour": "red",
+        "brand": [
+          "puma"
+        ]
       }
     },
     {
-      "title": "Lightweight Trainers - Red Size 10",
-      "description": "Lightweight Trainers - Red Size 10 description.",
-      "price": 2359,
-      "location": "Bangalore",
+      "title": "Nike Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2858,
+      "location": "Pune",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/205/200/300",
       "attributes": {
-        "size": "10",
-        "colour": "red",
-        "waterproof": false
+        "size": "8",
+        "colour": "blue",
+        "brand": [
+          "nike"
+        ]
       }
     },
     {
-      "title": "Urban Joggers - Size 8 Blue",
-      "description": "Urban Joggers - Size 8 Blue description.",
-      "price": 2287,
-      "location": "Hyderabad",
+      "title": "Adidas Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 1903,
+      "location": "Bangalore",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/206/200/300",
       "attributes": {
         "size": "8",
-        "colour": "blue",
-        "waterproof": false
+        "colour": "red",
+        "brand": [
+          "adidas"
+        ]
       }
     },
     {
-      "title": "All Terrain Runners - Size 9",
-      "description": "All Terrain Runners - Size 9 description.",
-      "price": 2673,
-      "location": "Ahmedabad",
+      "title": "Adidas Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2439,
+      "location": "Jaipur",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/207/200/300",
       "attributes": {
-        "size": "9",
-        "colour": "black",
-        "waterproof": true
+        "size": "7",
+        "colour": "blue",
+        "brand": [
+          "adidas"
+        ]
       }
     },
     {
-      "title": "Speed Trainers - Red Size 7",
-      "description": "Speed Trainers - Red Size 7 description.",
-      "price": 2862,
-      "location": "Jaipur",
+      "title": "Adidas Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2342,
+      "location": "Delhi",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/208/200/300",
       "attributes": {
-        "size": "7",
-        "colour": "red",
-        "waterproof": false
+        "size": "10",
+        "colour": "blue",
+        "brand": [
+          "adidas"
+        ]
       }
     },
     {
-      "title": "Cushioned Comfort - Size 8",
-      "description": "Cushioned Comfort - Size 8 description.",
-      "price": 2550,
+      "title": "Adidas Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 1739,
       "location": "Kolkata",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/209/200/300",
       "attributes": {
-        "size": "8",
-        "colour": "black",
-        "waterproof": false
+        "size": "9",
+        "colour": "blue",
+        "brand": [
+          "adidas"
+        ]
       }
     },
     {
-      "title": "Waterproof Road Runner - Size 9",
-      "description": "Waterproof Road Runner - Size 9 description.",
-      "price": 2295,
-      "location": "Lucknow",
+      "title": "Nike Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2433,
+      "location": "Bangalore",
       "category": "running-shoes",
       "image": "https://picsum.photos/id/210/200/300",
       "attributes": {
+        "size": "10",
+        "colour": "red",
+        "brand": [
+          "nike"
+        ]
+      }
+    },
+    {
+      "title": "Adidas Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2806,
+      "location": "Kolkata",
+      "category": "running-shoes",
+      "image": "https://picsum.photos/id/211/200/300",
+      "attributes": {
+        "size": "7",
+        "colour": "black",
+        "brand": [
+          "adidas"
+        ]
+      }
+    },
+    {
+      "title": "Nike Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2585,
+      "location": "Bangalore",
+      "category": "running-shoes",
+      "image": "https://picsum.photos/id/212/200/300",
+      "attributes": {
         "size": "9",
         "colour": "blue",
-        "waterproof": true
+        "brand": [
+          "nike"
+        ]
+      }
+    },
+    {
+      "title": "Nike Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2949,
+      "location": "Bangalore",
+      "category": "running-shoes",
+      "image": "https://picsum.photos/id/213/200/300",
+      "attributes": {
+        "size": "9",
+        "colour": "blue",
+        "brand": [
+          "nike"
+        ]
+      }
+    },
+    {
+      "title": "Nike Running Shoes",
+      "description": "Comfortable and durable running shoes.",
+      "price": 2277,
+      "location": "Ahmedabad",
+      "category": "running-shoes",
+      "image": "https://picsum.photos/id/214/200/300",
+      "attributes": {
+        "size": "10",
+        "colour": "blue",
+        "brand": [
+          "nike"
+        ]
+      }
+    },
+    {
+      "title": "Atomic Habits",
+      "description": "Bestselling book from popular author.",
+      "price": 575,
+      "location": "Lucknow",
+      "category": "books",
+      "image": "https://picsum.photos/id/300/200/300",
+      "attributes": {
+        "genre": "fiction",
+        "language": "tamil",
+        "binding": [
+          "paperback"
+        ]
+      }
+    },
+    {
+      "title": "The Life of Pi",
+      "description": "Bestselling book from popular author.",
+      "price": 912,
+      "location": "Bangalore",
+      "category": "books",
+      "image": "https://picsum.photos/id/301/200/300",
+      "attributes": {
+        "genre": "biography",
+        "language": "tamil",
+        "binding": [
+          "paperback"
+        ]
+      }
+    },
+    {
+      "title": "Atomic Habits",
+      "description": "Bestselling book from popular author.",
+      "price": 913,
+      "location": "Delhi",
+      "category": "books",
+      "image": "https://picsum.photos/id/302/200/300",
+      "attributes": {
+        "genre": "biography",
+        "language": "english",
+        "binding": [
+          "hardcover"
+        ]
+      }
+    },
+    {
+      "title": "Tintin Adventure",
+      "description": "Bestselling book from popular author.",
+      "price": 812,
+      "location": "Delhi",
+      "category": "books",
+      "image": "https://picsum.photos/id/303/200/300",
+      "attributes": {
+        "genre": "comics",
+        "language": "hindi",
+        "binding": [
+          "paperback"
+        ]
+      }
+    },
+    {
+      "title": "Tintin Adventure",
+      "description": "Bestselling book from popular author.",
+      "price": 810,
+      "location": "Chennai",
+      "category": "books",
+      "image": "https://picsum.photos/id/304/200/300",
+      "attributes": {
+        "genre": "comics",
+        "language": "tamil",
+        "binding": [
+          "hardcover"
+        ]
+      }
+    },
+    {
+      "title": "The Life of Pi",
+      "description": "Bestselling book from popular author.",
+      "price": 1176,
+      "location": "Hyderabad",
+      "category": "books",
+      "image": "https://picsum.photos/id/305/200/300",
+      "attributes": {
+        "genre": "non-fiction",
+        "language": "english",
+        "binding": [
+          "paperback"
+        ]
+      }
+    },
+    {
+      "title": "Tintin Adventure",
+      "description": "Bestselling book from popular author.",
+      "price": 599,
+      "location": "Lucknow",
+      "category": "books",
+      "image": "https://picsum.photos/id/306/200/300",
+      "attributes": {
+        "genre": "fiction",
+        "language": "tamil",
+        "binding": [
+          "paperback"
+        ]
+      }
+    },
+    {
+      "title": "Atomic Habits",
+      "description": "Bestselling book from popular author.",
+      "price": 719,
+      "location": "Hyderabad",
+      "category": "books",
+      "image": "https://picsum.photos/id/307/200/300",
+      "attributes": {
+        "genre": "non-fiction",
+        "language": "english",
+        "binding": [
+          "hardcover"
+        ]
+      }
+    },
+    {
+      "title": "Tintin Adventure",
+      "description": "Bestselling book from popular author.",
+      "price": 1022,
+      "location": "Kolkata",
+      "category": "books",
+      "image": "https://picsum.photos/id/308/200/300",
+      "attributes": {
+        "genre": "fiction",
+        "language": "hindi",
+        "binding": [
+          "paperback"
+        ]
+      }
+    },
+    {
+      "title": "Tintin Adventure",
+      "description": "Bestselling book from popular author.",
+      "price": 319,
+      "location": "Delhi",
+      "category": "books",
+      "image": "https://picsum.photos/id/309/200/300",
+      "attributes": {
+        "genre": "biography",
+        "language": "english",
+        "binding": [
+          "paperback"
+        ]
       }
     }
   ]
