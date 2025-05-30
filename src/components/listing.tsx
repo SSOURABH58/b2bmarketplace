@@ -28,7 +28,8 @@ function Listing({ listing }: ListingProps) {
     <Card className="w-full gap-1 p-2 cursor-pointer">
       <CardContent className="w-full flex flex-row px-2 gap-2 ">
         <Image
-          src="https://picsum.photos/200"
+          // src="https://picsum.photos/200"
+          src={listing.image}
           width={100}
           height={60}
           alt={listing.title}

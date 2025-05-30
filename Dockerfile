@@ -11,10 +11,9 @@ RUN npm install
 # Copy all files
 COPY . .
 
+ENV MONGODB_URI=mongodb://root:example@localhost:27017/
 # Build the application
 RUN npm run build
-
-RUN npm run seed
 
 # Expose the Next.js port (default 3000)
 EXPOSE 3000

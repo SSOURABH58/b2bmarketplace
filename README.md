@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Install Node.js (v16+ recommended)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Start containers:
+   ```bash
+   docker compose up -d
+   ```
+2. Seed database (after containers are running):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   npm run seed
+   ```
 
-## Learn More
+   This populates the database with test data from `scripts/b2db-marketplace-seed.json`.
 
-To learn more about Next.js, take a look at the following resources:
+3. Access the application at:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Stopping the Application
 
-## Deploy on Vercel
+1. Stop and remove containers:
+   ```bash
+   docker compose down
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I'll update the README with Docker and MongoDB setup details. Here's the new section to add:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Architecture Overview
+
+### Docker & MongoDB Setup
+
+- Uses Docker containers for MongoDB with persistent storage via named volumes
+- Data is stored in `mongodb_data` volume (persists between container restarts)
+- MongoDB container exposes port 27017 to the host
+
+### Next.js API Routes
+
+- API routes located in `pages/api/` directory
+- Serverless functions handle database operations
+- Uses MongoDB Node.js driver for database connectivity
+
+### Key Libraries
+
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **shadcn**: UI component library
+- **Zod**: Schema validation library for API request validation
+- **MongoDB Node.js Driver**: Official MongoDB driver for Node.js
