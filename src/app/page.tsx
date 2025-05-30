@@ -27,7 +27,7 @@ const fetchProducts = async (
     const { data } = await axios.get("/api/search", {
       params: {
         search,
-        category: categories,
+        category: `${categories}`,
         filters: `${JSON.stringify(filters)}`,
         page,
       },

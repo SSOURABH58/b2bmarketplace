@@ -41,13 +41,14 @@ export async function GET(req: NextRequest) {
     // Convert URLSearchParams to a plain object for Zod validation
     const paramsObject = Object.fromEntries(searchParams.entries());
     console.log(paramsObject);
-
-    const parsed = SearchSchema.safeParse({
+    const prams = {
       ...(paramsObject ?? {}),
       filters: JSON.parse(
         paramsObject.filters === "undefined" ? "{}" : paramsObject.filters
       ),
-    });
+    };
+
+    const parsed = SearchSchema.safeParse(prams);
     // console.log({
     //   ...paramsObject,
     //   filters: JSON.parse(paramsObject.filters ?? "{}"),
@@ -78,22 +79,22 @@ export async function GET(req: NextRequest) {
         if (filter && filter.value !== null && filter.value !== undefined) {
           switch (filter.type) {
             case "dropdown": // Handles single string or number values from dropdowns
-              query[key] = filter.value;
+              query[`attributes.${key}`] = filter.value;
               break;
             case "check": // Handles array of values from checkboxes
               if (Array.isArray(filter.value) && filter.value.length > 0) {
-                query[key] = { $in: filter.value };
+                query[`attributes.${key}`] = { $in: filter.value };
               }
               break;
             case "range": // Handles range values from sliders
               if (Array.isArray(filter.value) && filter.value.length === 2) {
                 const [min, max] = filter.value;
                 if (min !== null && max !== null) {
-                  query[key] = { $gte: min, $lte: max };
+                  query[`attributes.${key}`] = { $gte: min, $lte: max };
                 } else if (min !== null) {
-                  query[key] = { $gte: min };
+                  query[`attributes.${key}`] = { $gte: min };
                 } else if (max !== null) {
-                  query[key] = { $lte: max };
+                  query[`attributes.${key}`] = { $lte: max };
                 }
               }
               break;
@@ -104,6 +105,8 @@ export async function GET(req: NextRequest) {
         }
       }
     }
+
+    console.log(query);
 
     const totalListings = await Listing.countDocuments(query);
     const listings = await Listing.find(query)
